@@ -27,16 +27,21 @@ class _SplashScreenState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(
-        begin: Alignment.topRight,
-        end: Alignment.bottomLeft,
-        colors: [
-          Color.fromARGB(255, 223, 2, 252),
-          Color.fromARGB(255, 179, 176, 0),
-        ],
-      )),
-      child: const SizedBox(height: 50, width: 50, child: Manette()),
-    );
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [
+            Color.fromARGB(255, 223, 2, 252),
+            Color.fromARGB(255, 179, 176, 0),
+          ],
+        )),
+        child: Column(
+          children: const [
+            Padding(padding: EdgeInsets.all(60)),
+            SizedBox(height: 400, width: 450, child: Manette()),
+            SizedBox(height: 300, width: 300, child: Loader()),
+          ],
+        ));
   }
 }

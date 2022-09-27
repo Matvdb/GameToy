@@ -43,56 +43,73 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              "Bienvenu dans cette application",
-              style: TextStyle(fontSize: 30.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(
+                  "Bienvenu dans ",
+                  style: TextStyle(fontSize: 30.0),
+                ),
+                Text(
+                  "GameToy",
+                  style: TextStyle(
+                      color: Colors.orangeAccent,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30.0),
+                ),
+              ],
             ),
-            const Padding(padding: EdgeInsets.all(10)),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/tictacto');
-              },
-              child: Container(
-                  height: 50,
-                  width: 200,
-                  color: Colors.purple,
-                  child: Row(
-                    children: const [
-                      SizedBox(
+            const Padding(padding: EdgeInsets.all(20)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/tictacto');
+                  },
+                  child: Container(
+                      height: 50,
+                      width: 200,
+                      color: Colors.purple,
+                      child: Row(
+                        children: const [
+                          SizedBox(
+                            height: 50,
+                            width: 50,
+                            child: Morpion(),
+                          ),
+                          Padding(padding: EdgeInsets.all(8)),
+                          Text("Jeu du Tic Tac Toe")
+                        ],
+                      )),
+                ),
+                const Padding(padding: EdgeInsets.all(10)),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/taquin');
+                    },
+                    child: Container(
                         height: 50,
-                        width: 50,
-                        child: Morpion(),
-                      ),
-                      Padding(padding: EdgeInsets.all(8)),
-                      Text("Jeu du Tic Tac Toe")
-                    ],
-                  )),
+                        width: 200,
+                        color: Colors.purple,
+                        child: Row(
+                          children: const [
+                            SizedBox(
+                              height: 50,
+                              width: 50,
+                              child: Taquin(),
+                            ),
+                            Padding(padding: EdgeInsets.all(13)),
+                            Text("Jeu du Taquin")
+                          ],
+                        ))),
+              ],
             ),
-            const Padding(padding: EdgeInsets.all(10)),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/taquin');
-                },
-                child: Container(
-                    height: 50,
-                    width: 200,
-                    color: Colors.purple,
-                    child: Row(
-                      children: const [
-                        SizedBox(
-                          height: 50,
-                          width: 50,
-                          child: Taquin(),
-                        ),
-                        Padding(padding: EdgeInsets.all(13)),
-                        Text("Jeu du Taquin")
-                      ],
-                    ))),
             const Padding(padding: EdgeInsets.all(60)),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
-                Text("Application crée par "),
+                Text("Application crée en "),
                 SizedBox(
                   height: 30,
                   width: 30,

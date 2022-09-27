@@ -52,15 +52,15 @@ class _TicTacToePageState extends State<TicTacToePage> {
       ),
       body: SingleChildScrollView(
           child: Container(
-        height: 1000,
-        width: 1080,
+        height: 950,
+        width: 950,
         decoration: const BoxDecoration(
             gradient: LinearGradient(
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
           colors: [
             Color.fromARGB(255, 248, 252, 2),
-            Color.fromARGB(255, 95, 94, 0),
+            Color.fromARGB(255, 68, 67, 0),
           ],
         )),
         child: Column(
@@ -97,7 +97,7 @@ class _TicTacToePageState extends State<TicTacToePage> {
     return Container(
       height: MediaQuery.of(context).size.height / 2,
       width: MediaQuery.of(context).size.height / 2,
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3),
@@ -152,7 +152,7 @@ class _TicTacToePageState extends State<TicTacToePage> {
   }
 
   winner() {
-    List<List<int>> winnerList = [
+    List<List<int>> grilleWin = [
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
@@ -163,10 +163,10 @@ class _TicTacToePageState extends State<TicTacToePage> {
       [2, 4, 6],
     ];
 
-    for (var winnigPos in winnerList) {
-      String grille0 = occuper[winnigPos[0]];
-      String grille1 = occuper[winnigPos[1]];
-      String grille2 = occuper[winnigPos[2]];
+    for (var winPosition in grilleWin) {
+      String grille0 = occuper[winPosition[0]];
+      String grille1 = occuper[winPosition[1]];
+      String grille2 = occuper[winPosition[2]];
 
       if (grille0.isNotEmpty) {
         if (grille0 == grille1 && grille0 == grille2) {

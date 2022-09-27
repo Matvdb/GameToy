@@ -52,3 +52,16 @@ class Taquin extends StatelessWidget {
     );
   }
 }
+
+class Loader extends StatelessWidget {
+  const Loader({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = const AssetImage('assets/images/loading.gif');
+    Image image = Image(image: assetImage);
+    return Container(
+      child: image,
+    );
+  }
+}
