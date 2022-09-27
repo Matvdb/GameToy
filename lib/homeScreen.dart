@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                   },
                   child: Container(
                       height: 50,
-                      width: 200,
+                      width: 150,
                       color: Colors.purple,
                       child: Row(
                         children: const [
@@ -79,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                             child: Morpion(),
                           ),
                           Padding(padding: EdgeInsets.all(8)),
-                          Text("Jeu du Tic Tac Toe")
+                          Text("Tic Tac Toe")
                         ],
                       )),
                 ),
@@ -90,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                     },
                     child: Container(
                         height: 50,
-                        width: 200,
+                        width: 150,
                         color: Colors.purple,
                         child: Row(
                           children: const [
@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                               child: Taquin(),
                             ),
                             Padding(padding: EdgeInsets.all(13)),
-                            Text("Jeu du Taquin")
+                            Text("Taquin")
                           ],
                         ))),
               ],
